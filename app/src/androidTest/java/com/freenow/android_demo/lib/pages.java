@@ -18,6 +18,6 @@ public class pages extends locator {
         SEARCH_DRIVER_FIELD.sendKeys(searchValue);
         Thread.sleep(1000);
         contactSuggestion(contactName).select(contactName);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }
