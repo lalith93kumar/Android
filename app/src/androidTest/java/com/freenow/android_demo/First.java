@@ -34,6 +34,15 @@ public class First {
             First.loginPageObj.logout();
         }
     }
+    
+    @Test
+    public void validContactSearch() throws InterruptedException {
+        First.loginPageObj.login("crazydog335","venture");
+        First.loginPageObj.contact("sa","Sara Christensen");
+        assertTrue("",First.loginPageObj.CONTACTIMAGE.isPresent());
+        First.loginPageObj.back();
+    }
+    
     @Test
     public void validLoginCredentials() throws InterruptedException {
         First.loginPageObj.login("crazydog335","venture");
@@ -44,14 +53,6 @@ public class First {
     public void invalidLoginCredentials() throws InterruptedException {
         First.loginPageObj.login("crazydog33552","venturemax");
         assertFalse("",First.loginPageObj.SEARCH_DRIVER_FIELD.isPresent());
-    }
-
-    @Test
-    public void validContactSearch() throws InterruptedException {
-        First.loginPageObj.login("crazydog335","venture");
-        First.loginPageObj.contact("sa","Sara Christensen");
-        assertTrue("",First.loginPageObj.CONTACTIMAGE.isPresent());
-        First.loginPageObj.back();
     }
 
     @Test
