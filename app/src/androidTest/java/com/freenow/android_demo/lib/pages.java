@@ -1,5 +1,5 @@
 package com.freenow.android_demo.lib;
-
+import android.support.test.espresso.Espresso;
 public class pages extends locator {
 
     public void login(String user, String password) throws InterruptedException {
@@ -19,5 +19,9 @@ public class pages extends locator {
         Thread.sleep(1000);
         contactSuggestion(contactName).select(contactName);
         Thread.sleep(2000);
+    }
+    
+    public void back() {
+        Espresso.pressBack();
     }
 }
