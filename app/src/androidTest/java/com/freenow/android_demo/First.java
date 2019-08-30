@@ -51,6 +51,7 @@ public class First {
         First.loginPageObj.login("crazydog335","venture");
         First.loginPageObj.contact("sa","Sara Christensen");
         assertTrue("",First.loginPageObj.CONTACTIMAGE.isPresent());
+        First.loginPageObj.back();
     }
 
     @Test
@@ -58,6 +59,7 @@ public class First {
         First.loginPageObj.login("crazydog335","venture");
         First.loginPageObj.contact("sa","Sarah Scott");
         assertTrue("",First.loginPageObj.CONTACTIMAGE.isPresent());
+        First.loginPageObj.back();
     }
 
 }
